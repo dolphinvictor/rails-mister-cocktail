@@ -11,6 +11,7 @@
 
         <% @cocktails.each do |cocktail| %><!-- no puts -->
         <li>
+
           <strong>
             <%= link_to cocktail.name, cocktail_path(cocktail) %>
           </strong>
@@ -22,3 +23,5 @@
     </div>
   </div>
 </div>
+
+
