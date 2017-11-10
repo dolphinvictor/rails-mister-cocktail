@@ -1,2 +1,24 @@
-<h1>Cocktails#index</h1>
-<p>Find me in app/views/cocktails/index.html.erb</p>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+
+      <h1>Cocktail list</h1>
+
+      <ul style="list-style:none">
+
+        <% @cocktails.each do |cocktail| %><!-- no puts -->
+        <li>
+          <strong>
+            <%= link_to cocktail.name, cocktail_path(cocktail) %>
+          </strong>
+        </li>
+        <% end %><!-- no puts -->
+      </ul>
+
+      <%= link_to 'Add a cocktail to the list', new_cocktail_path, class: "btn btn-info" %>
+    </div>
+  </div>
+</div>
